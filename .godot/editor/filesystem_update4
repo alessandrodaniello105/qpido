@@ -1,2 +1,14 @@
 res://scenes/World.tscn
 res://characters/player/Player.tscn
+res://game.tscn
+res://theme/theme.tres
+res://decoration/wind_sway.tres
+res://grid_movement/pawns/character.tscn
+res://grid_movement/exploration.tscn
+res://characters/core/Character.gd
+res://characters/core/CharacterCore.gd
+res://characters/core/CharacterCore.tscn
+res://characters/player/Player.tscn
+res://characters/player/Player.gd
+res://default_bus_layout.tres
+res://scenes/World.tscn
