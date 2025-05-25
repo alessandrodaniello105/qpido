@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://ehm4pdan07ls"]
+
+[ext_resource type="PackedScene" uid="uid://bid73tixbyofv" path="res://characters/player/Player.tscn" id="1_kqs1s"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_io8um"]
+
+[sub_resource type="NavigationPolygon" id="NavigationPolygon_kqs1s"]
+vertices = PackedVector2Array(1241.17, 690.023, 34.1797, 692.969, 45.8203, 46.9922, 1252.81, 46)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(36, 37, 24, 703, 1251, 700, 1263, 36)])
+
+[node name="World" type="Node2D"]
+texture_filter = 2
+material = SubResource("CanvasItemMaterial_io8um")
+use_parent_material = true
+
+[node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+navigation_polygon = SubResource("NavigationPolygon_kqs1s")
+
+[node name="CharacterCore" parent="." instance=ExtResource("1_kqs1s")]
+position = Vector2(625, 315)
+scale = Vector2(0.215444, 0.21417)

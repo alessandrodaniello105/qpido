@@ -1,0 +1,13 @@
+TileMapLayer
+TileMap
+ParallaxBackground
+AnimatedSprite2D
+Area2D
+CollisionPolygon2D
+Polygon2D
+NavigationRegion2D
+ColorRect
+Timer
+CollisionShape2D
+NavigationAgent2D
+CharacterBody2D

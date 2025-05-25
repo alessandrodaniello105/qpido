@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://600ytki5pfjp"]
+
+[ext_resource type="Script" uid="uid://cqqqf3qkbxv3i" path="res://characters/core/CharacterCore.gd" id="1_5t7qx"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lsk8h"]
+
+[node name="CharacterCore" type="CharacterBody2D"]
+script = ExtResource("1_5t7qx")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lsk8h")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true

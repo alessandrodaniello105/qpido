@@ -649,7 +649,6 @@ combat_actor = ExtResource("7")
 [node name="Slime" parent="Grid/Opponent/Pivot" index="0"]
 position = Vector2(0, -4.49726)
 scale = Vector2(0.906015, 1.14098)
-texture = null
 
 [node name="DialoguePlayer" parent="Grid/Opponent" instance=ExtResource("8")]
 dialogue_file = "res://dialogue/dialogue_data/npc.json"
