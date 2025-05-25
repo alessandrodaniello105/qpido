@@ -9,6 +9,9 @@ enum CellType {
 
 @export var type := CellType.ACTOR
 
+func saluto(arg1:String) -> void:
+	print("wewe " + arg1)
+	 
 var active := true: set = set_active
 
 func set_active(value: bool) -> void:
