@@ -123,5 +123,6 @@ script = ExtResource("2_jr8aq")
 proprieta_test = false
 
 [node name="AnimatedSprite2D" parent="." index="1"]
+position = Vector2(8, -864)
 sprite_frames = SubResource("SpriteFrames_jr8aq")
 animation = &"walk_up"

@@ -1,22 +1,29 @@
-[gd_scene load_steps=4 format=3 uid="uid://ehm4pdan07ls"]
+[gd_scene load_steps=5 format=3 uid="uid://ehm4pdan07ls"]
 
+[ext_resource type="Texture2D" uid="uid://covf78glaekqk" path="res://scenes/cameretta.png" id="1_32lhk"]
 [ext_resource type="PackedScene" uid="uid://bid73tixbyofv" path="res://characters/player/Player.tscn" id="1_kqs1s"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_io8um"]
 
 [sub_resource type="NavigationPolygon" id="NavigationPolygon_kqs1s"]
-vertices = PackedVector2Array(1241.17, 690.023, 34.1797, 692.969, 45.8203, 46.9922, 1252.81, 46)
-polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2, 3)])
-outlines = Array[PackedVector2Array]([PackedVector2Array(36, 37, 24, 703, 1251, 700, 1263, 36)])
+vertices = PackedVector2Array(717.891, 700.578, 742.289, 705.383, 179.328, 697.188, 605.078, 648.352, 236.109, 595.406, 603.719, 433.18, 644.133, 454.727, 553.781, 511.898, 555.406, 455.922, 230.063, 446.43, 248.883, 389.977, 476.867, 419.547, 522.578, 457.133)
+polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 0, 2, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(7, 3, 4, 9, 10, 11, 12), PackedInt32Array(7, 12, 8)])
+outlines = Array[PackedVector2Array]([PackedVector2Array(242, 379, 220, 445, 226, 593, 168, 697, 166, 707, 853, 717, 721, 691, 613, 641, 566, 516, 664, 454, 604, 422, 553, 446, 526, 447, 481, 410)])
 
 [node name="World" type="Node2D"]
 texture_filter = 2
 material = SubResource("CanvasItemMaterial_io8um")
 use_parent_material = true
 
+[node name="Map" type="Sprite2D" parent="."]
+position = Vector2(532, 417)
+scale = Vector2(0.32348, 0.32348)
+texture = ExtResource("1_32lhk")
+
 [node name="NavigationRegion2D" type="NavigationRegion2D" parent="."]
+position = Vector2(95, -2)
 navigation_polygon = SubResource("NavigationPolygon_kqs1s")
 
 [node name="CharacterCore" parent="." instance=ExtResource("1_kqs1s")]
-position = Vector2(625, 315)
-scale = Vector2(0.215444, 0.21417)
+position = Vector2(461, 539)
+scale = Vector2(0.135442, 0.134641)
