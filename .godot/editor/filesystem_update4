@@ -1,3 +1,5 @@
+res://scenes/World.tscn
+res://characters/player/Player.tscn
 res://game.tscn
 res://theme/theme.tres
 res://decoration/wind_sway.tres
