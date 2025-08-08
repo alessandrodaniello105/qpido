@@ -1,7 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://ehm4pdan07ls"]
+[gd_scene load_steps=8 format=3 uid="uid://ehm4pdan07ls"]
 
-[ext_resource type="Texture2D" uid="uid://covf78glaekqk" path="res://scenes/cameretta.png" id="1_32lhk"]
+[ext_resource type="Texture2D" uid="uid://dxu832t16gqn5" path="res://scenes/cameretta.png" id="1_32lhk"]
+[ext_resource type="Script" uid="uid://cieam32nbjses" path="res://scenes/world.gd" id="1_d1c63"]
 [ext_resource type="PackedScene" uid="uid://bid73tixbyofv" path="res://characters/player/Player.tscn" id="1_kqs1s"]
+[ext_resource type="Script" uid="uid://bydk0npop2krc" path="res://scenes/computer_area___area_2d.gd" id="3_7g83o"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_io8um"]
 
@@ -10,10 +12,14 @@ vertices = PackedVector2Array(717.891, 700.578, 742.289, 705.383, 179.328, 697.1
 polygons = Array[PackedInt32Array]([PackedInt32Array(0, 1, 2), PackedInt32Array(3, 0, 2, 4), PackedInt32Array(5, 6, 7, 8), PackedInt32Array(7, 3, 4, 9, 10, 11, 12), PackedInt32Array(7, 12, 8)])
 outlines = Array[PackedVector2Array]([PackedVector2Array(242, 379, 220, 445, 226, 593, 168, 697, 166, 707, 853, 717, 721, 691, 613, 641, 566, 516, 664, 454, 604, 422, 553, 446, 526, 447, 481, 410)])
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_d1c63"]
+size = Vector2(190, 203)
+
 [node name="World" type="Node2D"]
 texture_filter = 2
 material = SubResource("CanvasItemMaterial_io8um")
 use_parent_material = true
+script = ExtResource("1_d1c63")
 
 [node name="Map" type="Sprite2D" parent="."]
 position = Vector2(532, 417)
@@ -27,3 +33,10 @@ navigation_polygon = SubResource("NavigationPolygon_kqs1s")
 [node name="CharacterCore" parent="." instance=ExtResource("1_kqs1s")]
 position = Vector2(461, 539)
 scale = Vector2(0.135442, 0.134641)
+
+[node name="ComputerArea - Area2D" type="Area2D" parent="."]
+script = ExtResource("3_7g83o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ComputerArea - Area2D"]
+position = Vector2(857, 493.5)
+shape = SubResource("RectangleShape2D_d1c63")

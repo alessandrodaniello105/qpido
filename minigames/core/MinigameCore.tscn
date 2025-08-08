@@ -1,0 +1,13 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkbx4e7gx1hkw"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_o33y5"]
+
+[node name="MinigameCore" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 3
+texture_repeat = 2
+scale = Vector2(1267, 701)
+texture = SubResource("PlaceholderTexture2D_o33y5")
